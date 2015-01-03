@@ -40,6 +40,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/slim/prebuilt/common/etc/init.local.rc:root/init.slim.rc
 
+# fstrim support
+PRODUCT_COPY_FILES += \
+    vendor/slim/prebuilt/common/etc/init.d/99fstrim:system/etc/init.d/99fstrim
+
 # Copy latinime for gesture typing
 PRODUCT_COPY_FILES += \
     vendor/slim/prebuilt/common/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so
