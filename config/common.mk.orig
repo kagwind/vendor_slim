@@ -86,8 +86,15 @@ PRODUCT_PACKAGES += \
 # Extra Optional packages
 PRODUCT_PACKAGES += \
     SlimCenter \
+    SlimLauncher \
+<<<<<<< HEAD
+=======
+    SimpleExplorer \
     Layers \
+>>>>>>> 97f8599... [1/2] Add @lovejoy777 new Layers app to the build
+    LatinIME \
     BluetoothExt \
+    DashClock
 
 #    SlimFileManager removed until updated
 
