@@ -28,6 +28,13 @@ on boot
 	setprop net.tcp.usercfg.wifi       1
 	setprop net.tcp.usercfg.lte        1
 
+# Tweak background writeout
+	write /proc/sys/vm/dirty_expire_centisecs 200 
+	write /proc/sys/vm/dirty_background_ratio 5
+	write /proc/sys/vm/dirty_ratio 10
+	write /proc/sys/vm/dirty_writeback_centisecs 100 
+	write /proc/sys/vm/swappiness 10
+								  
 # adb over network
 on property:service.adb.tcp.port=5555
     stop adbd
@@ -41,3 +48,13 @@ service sysinit /system/bin/sysinit
     user root
     oneshot
     disabled
+
+# Run runparts
+	start userinit
+
+# runparts (/system/etc/init.d)
+	service userinit /system/xbin/busybox run-parts /system/etc/init.d
+	oneshot
+	class late_start
+	user root
+	group root
