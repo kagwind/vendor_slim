@@ -16,7 +16,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.setupwizard.enterprise_mode=1 \
     ro.com.android.dateformat=MM-dd-yyyy \
     ro.com.android.dataroaming=false \
-    ro.com.android.mobiledata=false
+    ro.com.android.mobiledata=false \
+	dalvik.vm.image-dex2oat-filter=everything \
+	dalvik.vm.dex2oat-filter=everything
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.selinux=1
