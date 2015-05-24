@@ -126,6 +126,10 @@ PRODUCT_COPY_FILES += \
     vendor/slim/prebuilt/common/UPDATE-SuperSU.zip:system/addon.d/UPDATE-SuperSU.zip \
     vendor/slim/prebuilt/common/etc/init.d/99SuperSUDaemon:system/etc/init.d/99SuperSUDaemon
 
+# Copy CodeBlue cleanup script
+PRODUCT_COPY_FILES += \
+    vendor/slim/prebuilt/common/code_blue_tweaks.sh:system/addon.d/code_blue_tweaks.sh
+
 # easy way to extend to add more packages
 -include vendor/extra/product.mk
 
